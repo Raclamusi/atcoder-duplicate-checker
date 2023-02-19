@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Atcoder Duplicate Checker
+// @name         AtCoder Duplicate Checker
 // @namespace    https://github.com/Raclamusi
 // @version      1.0.0
 // @description  重複提出をチェックします。 Check for duplicate submissions.
@@ -11,7 +11,7 @@
 // @license      MIT
 // ==/UserScript==
 
-// Atcoder Duplicate Checker
+// AtCoder Duplicate Checker
 //
 // Copyright (c) 2022 Raclamusi
 //
