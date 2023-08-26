@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AtCoder Duplicate Checker
 // @namespace    https://github.com/Raclamusi
-// @version      1.0.1
+// @version      1.0.2
 // @description  重複提出をチェックします。 Check for duplicate submissions.
 // @author       Raclamusi
 // @supportURL   https://github.com/Raclamusi/atcoder-duplicate-checker
@@ -35,6 +35,15 @@
         };
         const msg = messages[lang in messages ? lang : "ja"];
         return `${msg[0]} (${time})\n${msg[1]}`;
+    };
+
+    const aceEditor = ace.edit("editor");
+    const plainEditor = document.getElementById("plain-textarea");
+    const getSourceCode = () => {
+        if (plainEditor.style.display === "none") {
+            return aceEditor.getValue();
+        }
+        return plainEditor.value;
     };
 
     const getSubmissions = async contest => {
